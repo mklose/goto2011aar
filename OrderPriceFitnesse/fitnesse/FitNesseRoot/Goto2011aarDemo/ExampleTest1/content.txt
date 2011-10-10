@@ -1,0 +1,50 @@
+|Import|
+|goto2011aar.example1.fixtures|
+
+#|script|shop set up|
+#|reset shop|
+
+
+|Table:Books|
+|id|name|price|
+|1|Specification by Example|30|
+|2|Fit for Developing Software|50|
+
+|Table:Locations|
+|id|name|shipping costs|
+|1|Germany|10|
+|2|outside Germany|30|
+
+#use Decision Table instead of 'Table:'
+|Customers|
+|id|name|status|location id|
+|1|Klaus|regular|1|
+|2|Peter|vip|1|
+|3|Tom|regular|2|
+|4|Steve|vip|2|
+
+|Table:Orders|
+|id|customer id|
+|1|1|
+|2|2|
+|3|3|
+|4|4|
+
+|Table:Order Positions|
+|id|order id|book id|amount|
+|1|1|1|2|order 1|
+|2|1|2|1|order 1|
+|3|2|1|1|order 2|
+|4|2|2|1|order 2|
+|5|3|1|1|order 3|
+|6|4|1|1|order 4|
+
+|Order price|
+|order id|price?|shipping costs?|
+|1|~=110|10.0|Germany regular customer|
+|2|~=80| 0.0|Germany vip customer|
+|3|~=30| 30.0|outside Germany regular customer|
+|4|~=30| 30.0|outside Germany vip customer|
+
+
+

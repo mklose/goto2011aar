@@ -1,0 +1,3 @@
+|scenario|shipping cost for |customerstatus |customer from |location|is|amount|
+|$order= |create order for |@customerstatus|customer from|@location         |
+|check   |shipping cost for|$order         |is           |@amount           |

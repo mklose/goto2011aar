@@ -1,0 +1,6 @@
+-|shipping cost for customer from is  |
+|customerstatus|location      |amount|
+|regular       |Germany        |10.0  |
+|vip           |Germany        |0.0   |
+|regular       |outside Germany|30.0  |
+|vip           |outside Germany|30.0  |vip customers have free shipping only in Germany|

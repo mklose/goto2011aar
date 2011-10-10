@@ -1,0 +1,9 @@
+|Script  |Order                                                 |
+|$order =|create order for |regular|customer from|Germany        |
+|check   |shipping cost for|$order |is           |10.0          |
+|$order =|create order for |vip    |customer from|Germany        |
+|check   |shipping cost for|$order |is           |0.0           |
+|$order =|create order for |regular|customer from|outside Germany|
+|check   |shipping cost for|$order |is           |30.0          |
+|$order =|create order for |vip    |customer from|outside Germany|
+|check   |shipping cost for|$order |is           |30.0          |

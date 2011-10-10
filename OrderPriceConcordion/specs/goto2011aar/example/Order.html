@@ -1,0 +1,54 @@
+<html xmlns:concordion="http://www.concordion.org/2007/concordion">
+<link href="../concordion.css" rel="stylesheet" type="text/css" />
+<body>
+
+    <h1>Example in concordion</h1>
+
+    <div class="example">       
+        <h2>Book Order</h2>		
+        <p>
+            For a <b concordion:set="#customerStatus">regular</b> customer with location
+            <b concordion:execute="#result = createOrderForCustomerFrom(#customerStatus, #TEXT)">Germany</b>
+            shipping cost should be
+            <b concordion:assertEquals="shippingCostForIs(#result)">10.0</b>
+        </p>
+    </div>
+    
+    <div class="exampleTable">
+
+            <h2>shipping cost <b concordion:set="#customerLocation">Germany</b></h2>
+
+            <table>
+                <tr>
+                    <th>customerstatus</th>
+                    <th>shippingcost</th>
+                </tr>
+                <tr>
+                	<td concordion:execute="#result = createOrderForCustomerFrom(#TEXT, #customerLocation)">regular</td>
+                    <td concordion:assertEquals="shippingCostForIs(#result)">10.0</td>
+                </tr>
+                <tr>
+                	<td concordion:execute="#result = createOrderForCustomerFrom(#TEXT, #customerLocation)">vip</td>
+                    <td concordion:assertEquals="shippingCostForIs(#result)">0.0</td>
+                </tr>
+            </table>
+			<br/>
+			<h2>shipping cost <b concordion:set="#customerLocation">outside Germany</b></h2>
+            <table>
+                <tr>
+                    <th>customerstatus</th>
+                    <th>shippingcost</th>
+                </tr>
+                <tr>
+                	<td concordion:execute="#result = createOrderForCustomerFrom(#TEXT, #customerLocation)">regular</td>
+                    <td concordion:assertEquals="shippingCostForIs(#result)">30.0</td>
+                </tr>
+                <tr>
+                	<td concordion:execute="#result = createOrderForCustomerFrom(#TEXT, #customerLocation)">vip</td>
+                    <td concordion:assertEquals="shippingCostForIs(#result)">30.0</td>
+                </tr>
+            </table>
+        </div>
+
+</body>
+</html>

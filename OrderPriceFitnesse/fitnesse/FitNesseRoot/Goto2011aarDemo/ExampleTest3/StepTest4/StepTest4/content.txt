@@ -1,0 +1,9 @@
+|shipping cost Germany|
+|customerstatus|shippingcost|
+|regular|10.0|
+|vip |0.0|
+
+|shipping cost outside Germany|
+|customerstatus|shippingcost|
+|regular|30.0|
+|vip |30.0|

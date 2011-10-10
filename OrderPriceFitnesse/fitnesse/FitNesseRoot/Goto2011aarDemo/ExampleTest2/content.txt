@@ -1,0 +1,38 @@
+|Import|
+|goto2011aar.example2.fixtures|
+
+|Script|Order|
+|check|shipping cost Germany|10.0|
+|check|shipping cost outside Germany|30.0|
+
+|Script|Order|
+|with|1|books|Specification by Example|at price|30|
+|with|2|books|Fit for Developing Software|at price|50|
+|customer is|regular|
+|ship to|Germany|
+|check|price|130.0|
+|check|shipping cost|10.0|
+
+|Script|Order|
+|with|1|books|Specification by Example|at price|30|
+|with|1|books|Fit for Developing Software|at price|50|
+|customer is|vip|
+|ship to|Germany|
+|check| price|80.0|
+|check|shipping cost|0.0|
+
+|Script|Order|
+|with|2|books|Specification by Example|at price|30|
+|with|1|books|Fit for Developing Software|at price|50|
+|customer is|regular|
+|ship to|outside Germany|
+|check|price|110.0|
+|check|shipping cost|30.0|
+
+|Script|Order|
+|with|2|books|Specification by Example|at price|30|
+|with|2|books|Fit for Developing Software|at price|50|
+|customer is|regular|
+|ship to|outside Germany|
+|check|price|160.0|
+|check|shipping cost|30.0|

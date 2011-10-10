@@ -1,0 +1,11 @@
+|scenario|shipping cost for|customerstatus |customer from|location|is|amount|
+|$order= |create order for |@customerstatus|customer from|@location         |
+|check   |shipping cost for|$order         |is           |@amount           |
+
+
+|scenario         |shipping cost  |customerstatus|Germany|shippingcost    |
+|shipping cost for|@customerstatus|customer from |Germany|is|@shippingcost|
+
+
+|scenario         |shipping cost  |customerstatus|outside Germany|shippingcost    |
+|shipping cost for|@customerstatus|customer from |outside Germany        |is|@shippingcost|

@@ -1,0 +1,14 @@
+|scenario    |Given an order|
+
+
+|scenario    |Given an order to _|location |
+|set location|@location||
+
+|scenario    |And the order is to _|location |
+|set location|@location                    ||
+
+|scenario           |When the customer is a _|customerstatus|
+|set customer status|@customerstatus                        |
+
+|scenario|Then the shipping cost is _|shippingcost |
+|check   |shipping cost              |@shippingcost|

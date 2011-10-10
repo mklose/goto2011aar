@@ -1,0 +1,6 @@
+bin
+.metadata/
+todo.txt
+
+OrderPriceJBehave/target
+OrderPriceConcordion/result

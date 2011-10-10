@@ -1,0 +1,10 @@
+|scenario|shipping cost for |customerstatus |customer from |location|is|amount|
+|$order= |create order for |@customerstatus|customer from|@location         |
+|check   |shipping cost for|$order         |is           |@amount           |
+
+
+|Script|Order|
+|shipping cost for|regular|customer from|Germany|is|10.0|
+|shipping cost for|vip |customer from |Germany| is |0.0|
+|shipping cost for|regular |customer from |outside Germany| is |30.0|
+|shipping cost for|vip|customer from |outside Germany| is |30.0|

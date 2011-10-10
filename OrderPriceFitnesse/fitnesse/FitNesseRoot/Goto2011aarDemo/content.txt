@@ -1,0 +1,6 @@
+!define TEST_SYSTEM {slim}
+!path fitness.jar
+!path bin
+!path ../OrderPrice/bin
+
+!contents -R2 -g -p -f -h
