@@ -13,7 +13,7 @@ import org.jbehave.core.reporters.StoryReporterBuilder;
 import org.jbehave.core.steps.CandidateSteps;
 import org.jbehave.core.steps.InstanceStepsFactory;
 
-public class Story extends JUnitStory {
+public abstract class Story extends JUnitStory {
 	// Here we specify the configuration, starting from default MostUsefulConfiguration, and changing only what is needed
     @Override
     public Configuration configuration() {
